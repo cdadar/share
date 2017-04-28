@@ -1,0 +1,482 @@
+# Appear in cover-slide:
+#+TITLE: linux 命令
+#+SUBTITLE: linux 简单的分享
+#+DATE: 2017/04/28（五）
+#+AUTHOR: chens
+
+# org config
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: zh
+#+SELECT_TAGS: export
+
+# Appear under each slide:
+#+FAVICON: images/org-icon.png
+#+ICON: images/emacs-icon.png
+#+HASHTAG: linux 命令
+
+# Google Analytics
+#+ANALYTICS: UA-42122243-1
+
+# Highlight code blocks with Prettify.js
+#+USE_PRETTIFY: true
+
+# Display math formula with MathJax.js
+# MathJax is a little fat (~5 MB), set it `false` if no need to shrink the
+# size of slide file
+#+USE_MATHJAX: true
+
+# Build list animation
+#+USE_BUILDS: true
+
+* 历史
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** linux
+#+BEGIN_QUOTE
+Linux 是一种自由和开放源代码的类UNIX操作系统。该操作系统的内核由林纳斯·托
+瓦兹在1991年10月5日首次发布。在加上用户空间的应用程序之后，成为Linux操
+作系统。Linux也是自由软件和开放源代码软件发展中最著名的例子。只要遵循
+GNU通用公共许可证，任何个人和机构都可以自由地使用Linux的所有底层源代码，
+也可以自由地修改和再发布。大多数Linux系统还包括像提供GUI的X Window之类
+的程序。除了一部分专家之外，大多数人都是直接使用Linux发行版，而不是自
+己选择每一样组件或自行设置。
+-- 维基百科，自由的百科全书
+#+END_QUOTE
+
+** 发行版
+#+BEGIN_QUOTE
+这些发行版可以分为商业发行版，比如Fedora（Red Hat）、openSUSE（Novell）、
+Ubuntu（Canonical公司）和Mandriva Linux；和社区发行版，它们由自由软件
+社区提供支持，如Debian和Gentoo；也有发行版既不是商业发行版也不是社区发
+行版，其中最有名的是Slackware。
+-- 维基百科，自由的百科全书
+#+END_QUOTE
+* 软件安装
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** 软件包安装/删除
+
+red hat/centos/fedora
+#+BEGIN_SRC
+yum install xxx #安装软件
+yum remove xxx #删除软件
+#+END_SRC
+
+#+ATTR_HTML: :class build
+** 软件包安装/删除
+
+debian/ubuntu
+#+BEGIN_SRC
+apt-get install xxx #安装软件
+apt-get remove xxx #删除软件
+#+END_SRC
+
+** 源码编译安装
+
+需要安装gcc或者gcc-c++
+#+BEGIN_SRC
+./configure
+make && make install
+#+END_SRC
+
+源码编译需要手动处理软件的依赖
+
+** 二进制包直接安装
+red hat/centos/fedora
+#+BEGIN_SRC shell
+rpm -ivh xxx.rpm    #安装二进制包
+rpm -Uvh xxx.rpm    #更新二进制包
+rpm -ivh --force xxx.rpm   #强制安装二进制包
+rpm -qa|grep httpd  #[搜索指定rpm包是否安装]--all搜索*httpd*
+rpm -ql httpd       #[搜索rpm包]--list所有文件安装目录
+rpm -e xxx.rpm      #删除包
+#+END_SRC
+
+** 二进制包直接安装
+debian/ubuntu
+#+BEGIN_SRC
+dpkg -i packageName.deb   #安装软件
+dpkg -r xxx  #删除软件
+dpkg -I xxx.deb #查看linuxidc.deb软件包的详细信息，包括软件名称、版本以及大小等
+dpkg -c xxx.deb #查看linuxidc.deb软件包中包含的文件结构
+dpkg -l xxx #查看linuxidc软件包的信息
+dpkg -L xxx #查看linuxidc软件包安装的所有文件
+dpkg -s xxx #查看linuxidc软件包的详细信息
+#+END_SRC
+* 目录
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+** linux 目录结构
+:PROPERTIES:
+:ARTICLE:  smaller
+:END:
+| 目录       | 描述                                                                                                                                                               |
+| 根目录(/)   | 第一层次结构的根、整个文件系统层次结构的根目录。                                                                                                                   |
+| /bin/        | 需要在单用户模式可用的必要命令（可执行文件）；面向所有用户，例如：cat、ls、cp，和/usr/bin类似。                                                                    |
+| /boot/       | 引导程序文件，例如：kernel、initrd；时常是一个单独的分区                                                                                                           |
+| dev        | 必要设备,                                                                                                                                                          |
+| /etc/        | 特定主机，系统范围内的配置文件。                                                                                                                                   |
+| /etc/opt/    | /opt/的配置文件                                                                                                                                                    |
+| /etc/X11/    | X_Window系统(版本11)的配置文件                                                                                                                                     |
+| /etc/sgml/   | SGML的配置文件                                                                                                                                                     |
+| /etc/xml/    | XML的配置文件                                                                                                                                                      |
+| /home/       | 用户的家目录，包含保存的文件、个人设置等，一般为单独的分区。                                                                                                       |
+| /lib/        | /bin/  and  /sbin/中二进制文件必要的库文件。                                                                                                                         |
+| /media/      | 可移除媒体(如CD-ROM)的挂载点                                                                                                                                       |
+** linux 目录结构
+:PROPERTIES:
+:ARTICLE:  smaller
+:END:
+| 目录       | 描述                                                                                                                                                               |
+| lost+found | 在ext3文件系统中，当系统意外崩溃或机器意外关机，会产生一些文件碎片在这里。当系统在开机启动的过程中fsck工具会检查这里。                                             |
+| /mnt/        | 临时挂载的文件系统。比如cdrom,u盘等，直接插入光驱无法使用，要先挂载后使用                                                                                          |
+| /opt/        | 可选应用软件包。                                                                                                                                                   |
+| /proc/       | 虚拟文件系统，将内核与进程状态归档为文本文件（系统信息都存放这目录下）。例如：uptime、network。在Linux中，对应Procfs格式挂载。该目录下文件只能看不能改（包括root） |
+| /root/       | 超级用户的家目录                                                                                                                                                   |
+| /sbin/       | 必要的系统二进制文件，例如： init、 ip、 mount。sbin目录下的命令，普通用户都执行不了。                                                                             |
+| /srv/        | 站点的具体数据，由系统提供。                                                                                                                                       |
+| /tmp/        | 临时文件(参见/var/tmp)，在系统重启时目录中文件不会被保留。                                                                                                         |
+| /usr/        | 默认软件都会存于该目录下。用于存储只读用户数据的第二层次；包含绝大多数的(多)用户工具和应用程序。                                                                   |
+| /var/        | 变量文件——在正常运行的系统中其内容不断变化的文件，如日志，脱机文件和临时电子邮件文件。                                                                             |
+
+** 进入目录
+#+BEGIN_SRC shell
+cd /home/chen
+cd -   #回到上次所在目录，这个技巧我原来还真是不知道，感觉还是比较有用，省略了很多输入。
+cd !$  #把上个命令的参数作为输入。
+cd     #回到主目录
+cd ~   #同样也是回到主目录
+#+END_SRC
+** 创建
+创建目录
+: mkdir /home/chen/tmp
+#+BEGIN_SRC shell
+-p: 创建所有目录，如果目录不存在
+-v：显示mkdir创建的每个目录。通常与-p配合使用。
+-m：指定目录的权限,也可以用chmod命令设置;
+#+END_SRC
+: mkdir -m 775 DIRB
+** 创建
+新建文件
+: touch ~/test.txt
+#+BEGIN_SRC shell
+-a   或--time=atime或--time=access或--time=use 　只更改存取时间。
+-c   或--no-create 　不建立任何文档。
+-d 　使用指定的日期时间，而非现在的时间。
+-f 　此参数将忽略不予处理，仅负责解决BSD版本touch指令的兼容性问题。
+-m   或--time=mtime或--time=modify 　只更改变动时间。
+-r 　把指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同。
+     time规定为如下形式的十进制数: [[CC]YY]MMDDhhmm[.SS]
+-t 　使用指定的日期时间，而非现在的时间。
+#+END_SRC
+: touch -t   201211142234.50 test.txt
+
+[[http://www.cnblogs.com/peida/archive/2012/10/30/2745714.html]]
+* 查看
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** vim
+#+BEGIN_QUOTE
+Vim是从vi发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程
+的功能特别丰富，在程序员中被广泛使用。和Emacs并列成为类Unix系统用户最
+喜欢的编辑器。Vim的第一个版本由布莱姆·米勒在1991年发布。最初的简称是Vi
+IMitation，随着功能的不断增加，正式名称改成了Vi IMproved。现在是在开放
+源代码方式下发行的自由软件。
+
+-- 维基百科，自由的百科全书
+#+END_QUOTE
+** vim 基本操作
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/vim.jpg]]
+#+END_CENTER
+
+[[https://www.ibm.com/developerworks/cn/linux/l-vimdiff/][技巧：Vimdiff 使用]]
+** cat
+1. 一次显示整个文件:cat filename
+2. 从键盘创建一个文件:cat > filename 只能创建新文件,不能编辑已有文件.
+3. 将几个文件合并为一个文件:cat file1 file2 > file
+参数：
+#+BEGIN_SRC
+-A, --show-all           等价于 -vET
+-b, --number-nonblank    对非空输出行编号
+-e                       等价于 -vE
+-E, --show-ends          在每行结束处显示 $
+-n, --number     对输出的所有行编号,由1开始对所有输出的行数编号
+-s, --squeeze-blank  有连续两行以上的空白行，就代换为一行的空白行
+-t                       与 -vT 等价
+-T, --show-tabs          将跳格字符显示为 ^I
+-u                       (被忽略)
+-v, --show-nonprinting   使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外
+#+END_SRC
+
+[[http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html]]
+** tail
+用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看
+日志文件。
+参数：
+#+BEGIN_SRC
+-f 循环读取
+-q 不显示处理信息
+-v 显示详细的处理信息
+-c<数目> 显示的字节数
+-n<行数> 显示行数
+--pid=PID 与-f合用,表示在进程ID,PID死掉之后结束.
+-q, --quiet, --silent 从不输出给出文件名的首部
+-s, --sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒
+#+END_SRC
+
+[[http://www.cnblogs.com/peida/archive/2012/11/07/2758084.html]]
+** ps
+用来显示当前进程的状态
+参数：
+#+BEGIN_SRC
+a  显示所有进程
+-a 显示同一终端下的所有程序
+-A 显示所有进程
+c  显示进程的真实名称
+-N 反向选择
+-e 等于“-A”
+e  显示环境变量
+f  显示程序间的关系
+-H 显示树状结构
+r  显示当前终端的进程
+T  显示当前终端的所有程序
+u  指定用户的所有进程
+-au 显示较详细的资讯
+#+END_SRC
+** ps
+#+BEGIN_SRC
+-aux 显示所有包含其他使用者的行程
+-C<命令> 列出指定命令的状况
+--lines<行数> 每页显示的行数
+--width<字符数> 每页显示的字符数
+--help 显示帮助信息
+--version 显示版本显示
+#+END_SRC
+
+实例
+
+: ps -aux|grep java
+: ps -ef|grep java
+: ps -axu|grep java |awk '{print $2}'|xargs kill -9
+
+[[http://www.cnblogs.com/peida/archive/2012/12/19/2824418.html]]
+** top
+显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等
+参数：
+#+BEGIN_SRC
+-b 批处理
+-c 显示完整的治命令
+-I 忽略失效过程
+-s 保密模式
+-S 累积模式
+-i<时间> 设置间隔时间
+-u<用户名> 指定用户名
+-p<进程号> 指定进程
+-n<次数> 循环显示的次数
+#+END_SRC
+[[http://www.cnblogs.com/peida/archive/2012/12/24/2831353.html]]
+** ls
+列出目标目录中所有的子目录和文件。
+#+BEGIN_SRC
+-a, –all 列出目录下的所有文件，包括以 . 开头的隐含文件
+-A 同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。
+-c 配合 -lt：根据 ctime 排序及显示 ctime (文件状态最后更改的时间)
+   配合-l：显示 ctime 但根据名称排序否则：根据 ctime 排序
+-C 每栏由上至下列出项目
+–color[=WHEN] 控制是否使用色彩分辨文件。WHEN 可以是'never'、'always'或'auto'其中之一
+-d, –directory 将目录象文件一样显示，而不是显示其下的文件。
+-D, –dired 产生适合 Emacs 的 dired 模式使用的结果
+-f 对输出的文件不进行排序，-aU 选项生效，-lst 选项失效
+-g 类似 -l,但不列出所有者
+-G, –no-group 不列出任何有关组的信息
+-h, –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)
+–si 类似 -h,但文件大小取 1000 的次方而不是 1024
+-H, –dereference-command-line 使用命令列中的符号链接指示的真正目的地
+
+#+END_SRC
+** ls
+#+BEGIN_SRC
+–indicator-style=方式 指定在每个项目名称后加上指示符号
+    <方式>：none (默认)，classify (-F)，file-type (-p)
+-i, –inode 印出每个文件的 inode 号
+-I, –ignore=样式 不印出任何符合 shell 万用字符<样式>的项目
+-k 即 –block-size=1K,以 k 字节的形式表示文件的大小。
+-l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。
+-L, –dereference 当显示符号链接的文件信息时，显示符号链接所指示的对象而并非符号链接本身
+    的信息
+-m 所有项目以逗号分隔，并填满整行行宽
+-o 类似 -l,显示文件的除组信息外的详细信息。
+-r, –reverse 依相反次序排列
+-R, –recursive 同时列出所有子目录层
+-s, –size 以块大小为单位列出所有文件的大小
+-S 根据文件大小排序
+#+END_SRC
+** ls
+#+BEGIN_SRC
+–sort=WORD 以下是可选用的 WORD 和它们代表的相应选项：
+extension -X status -c
+none -U time -t
+size -S atime -u
+time -t access -u
+version -v use -u
+-t 以文件修改时间排序
+-u 配合 -lt:显示访问时间而且依访问时间排序
+配合 -l:显示访问时间但根据名称排序
+否则：根据访问时间排序
+-U 不进行排序;依文件系统原有的次序列出项目
+-v 根据版本进行排序
+-w, –width=COLS 自行指定屏幕宽度而不使用目前的数值
+-x 逐行列出项目而不是逐栏列出
+-X 根据扩展名排序
+-1 每行只列出一个文件
+–help 显示此帮助信息并离开
+–version 显示版本信息并离开
+#+END_SRC
+** ls
+ll并不是linux下一个基本的命令，它实际上是ls -l的一个别名。
+第一个字母
+#+BEGIN_SRC
+”-”,普通文件.
+”d”目录,字母”d”,是dirtectory(目录)的缩写.
+“l”符号链接。请注意,一个目录或者说一个文件夹是一个特殊文件,这个特殊文件存放的是其他文件和文件夹的相关信息.
+“b”块设备文件。
+“c”字符设备文件。
+#+END_SRC
+: ls -a
+: ll -a
+: ls -al |grep  sql
+
+[[http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html]]
+* 删除
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** rm
+删除一个目录中的一个或多个文件或目录，如果没有使用- r选项，则rm不会删
+除目录。如果使用 rm 来删除文件，通常仍可以将该文件恢复原状。
+
+#+BEGIN_SRC
+-f, --force    忽略不存在的文件，从不给出提示。
+-i, --interactive 进行交互式删除
+-r, -R, --recursive   指示rm将参数中列出的全部目录和子目录均递归地删除。
+-v, --verbose    详细显示进行的步骤
+--help     显示此帮助信息并退出
+--version  输出版本信息并退出
+#+END_SRC
+
+: rm -rf /
+: dd if=/dev/zero of=/dev/sda
+* 查找
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** find
+#+BEGIN_SRC
+-name 按照文件名查找文件
+-perm 按照文件权限来查找文件
+-prune 使用这一选项可以使find命令不在当前指定的目录中查找，
+-user 按照文件属主来查找文件
+-group 按照文件所属的组来查找文件
+-mtime -n +n 按照文件的更改时间来查找文件，
+       - n表示文件更改时间距现在n天以内，
+       + n表示文件更改时间距现在n天以前。
+-nogroup 查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。
+-nouser 查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。
+-newer file1 ! file2 查找更改时间比文件file1新但比文件file2旧的文件。
+#+END_SRC
+** find
+#+BEGIN_SRC
+ -type 查找某一类型的文件，诸如：
+    b - 块设备文件。
+    d - 目录。
+    c - 字符设备文件。
+    p - 管道文件。
+    l - 符号链接文件。
+    f - 普通文件。
+
+#+END_SRC
+: find ./ -size 0 -exec rm {} \; 删除文件大小为零的文件
+还可以以这样做： =rm -i `find ./ -size 0`= 或 =find ./ -size 0 | xargs rm -f &=
+
+在/logs目录中查找更改时间在5日以前的文件并删除它们
+: find /logs -type f -mtime +5 -exec rm {  } \;
+
+* 移动
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** mv
+视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件
+重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文
+件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件
+或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源文
+件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在
+跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接也
+将丢失。
+#+BEGIN_SRC
+-b  若需覆盖文件，则覆盖前先行备份。
+-f  force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖；
+-i  若目标文件 (destination) 已经存在时，就会询问是否覆盖！
+-u  若目标文件已经存在，且 source 比较新，才会更新(update)
+-t  --target-directory=DIRECTORY move all SOURCE arguments into DIRECTORY，
+    即指定mv的目标目录，该选项适用于移动多个源文件到一个目录的情况，
+    此时目标目录在前，源文件在后。
+#+END_SRC
+* 复制
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+#+ATTR_HTML: :class build
+** cp
+将源文件复制至目标文件，或将多个源文件复制至目标目录。
+#+BEGIN_SRC
+-a：此参数的效果和同时指定"-dpR"参数相同；
+-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；
+-f：强行复制文件或目录，不论目标文件或目录是否已存在；
+-i：覆盖既有文件之前先询问用户；
+-l：对源文件建立硬连接，而非复制文件；
+-p：保留源文件或目录的属性；
+-R/r：递归处理，将指定目录下的所有文件与子目录一并处理；
+-s：对源文件建立符号连接，而非复制文件；
+-u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；
+-S：在备份文件时，用指定的后缀“SUFFIX”代替文件的默认后缀；
+-b：覆盖已存在的文件目标前将目标文件备份；
+-v：详细显示命令执行的操作。
+#+END_SRC
+
+: /bin/cp xxx xxx
