@@ -62,7 +62,7 @@ body {
 slides > slide {
     display: none;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 26px;
+    font-size: 18px;
     color: $gray-3;
     //@include background(linear-gradient(white, white 85%, $gray-1));
     //background-color: white;
@@ -330,8 +330,8 @@ ol {
 
 pre {
     font-family: 'Source Code Pro', 'Courier New', monospace;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 18px;
     padding: 10px 0 10px $slide-left-right-padding;
     letter-spacing: -1px;
     margin-bottom: 20px;
