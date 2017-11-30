@@ -1,0 +1,39 @@
+# Appear in cover-slide:
+#+TITLE: 版本控制器 -- git
+#+SUBTITLE: 分布式版本控制器
+#+DATE: 2017/12/01（五）
+#+AUTHOR: chens
+
+# org config
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: zh
+#+SELECT_TAGS: export
+
+# Appear under each slide:
+#+FAVICON: images/org-icon.png
+#+ICON: images/emacs-icon.png
+#+HASHTAG: git
+
+# Google Analytics
+#+ANALYTICS: UA-42122243-1
+
+# Highlight code blocks with Prettify.js
+#+USE_PRETTIFY: true
+
+# Display math formula with MathJax.js
+# MathJax is a little fat (~5 MB), set it `false` if no need to shrink the
+# size of slide file
+#+USE_MATHJAX: true
+
+# Build list animation
+#+USE_BUILDS: true
+
+* 历史
+* 原理
