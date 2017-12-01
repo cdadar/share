@@ -295,20 +295,26 @@ Git 默认使用这个名字来标识你所克隆的原始仓库
 #+END_SRC
 
 ** 分支的变基
+=git rebase -i master=
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 350px
+#+ATTR_HTML: :width 500px
 [[file:images/18333fig0327-tn.png]]
 #+END_CENTER
 
 ** 分支的变基
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 350px
+#+ATTR_HTML: :width 500px
+[[file:images/20171201_091107.png]]
+#+END_CENTER
+** 分支的变基
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
 [[file:images/18333fig0328-tn.png]]
 #+END_CENTER
 
 ** 分支的变基
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 350px
+#+ATTR_HTML: :width 500px
 [[file:images/18333fig0329-tn.png]]
 #+END_CENTER
 
