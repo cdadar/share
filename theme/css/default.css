@@ -174,10 +174,10 @@ slides > slide {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 18px;
   color: #797979;
-  width: 900px;
-  height: 700px;
-  margin-left: -450px;
-  margin-top: -350px;
+  width: 1366px;
+  height: 768px;
+  margin-left: -683px;
+  margin-top: -384px;
   padding: 40px 60px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -488,7 +488,7 @@ code {
 /* line 371, ../scss/default.scss */
 iframe {
   width: 100%;
-  height: 530px;
+  height: 598px;
   background: white;
   border: 1px solid #e6e6e6;
   -moz-box-sizing: border-box;
@@ -910,10 +910,10 @@ article.large q:before, article.large q:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-transform: translateY(350px);
-  -ms-transform: translateY(350px);
-  -webkit-transform: translateY(350px);
-  transform: translateY(350px);
+  -moz-transform: translateY(384px);
+  -ms-transform: translateY(384px);
+  -webkit-transform: translateY(384px);
+  transform: translateY(384px);
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -943,10 +943,10 @@ article.large q:before, article.large q:after {
 /* line 716, ../scss/default.scss */
 .with-notes.popup slides.layout-widescreen slide .note,
 .with-notes.popup slides.layout-faux-widescreen slide .note {
-  -moz-transform: translate3d(300px, 800px, 0) scale(1.5);
-  -ms-transform: translate3d(300px, 800px, 0) scale(1.5);
-  -webkit-transform: translate3d(300px, 800px, 0) scale(1.5);
-  transform: translate3d(300px, 800px, 0) scale(1.5);
+  -moz-transform: translate3d(300px, 868px, 0) scale(1.5);
+  -ms-transform: translate3d(300px, 868px, 0) scale(1.5);
+  -webkit-transform: translate3d(300px, 868px, 0) scale(1.5);
+  transform: translate3d(300px, 868px, 0) scale(1.5);
 }
 /* line 722, ../scss/default.scss */
 .with-notes.popup slide {
@@ -982,10 +982,10 @@ article.large q:before, article.large q:after {
 }
 /* line 740, ../scss/default.scss */
 .with-notes.popup slide.next {
-  -moz-transform: translate3d(570px, 80px, 0) scale(0.35);
-  -ms-transform: translate3d(570px, 80px, 0) scale(0.35);
-  -webkit-transform: translate3d(570px, 80px, 0) scale(0.35);
-  transform: translate3d(570px, 80px, 0) scale(0.35);
+  -moz-transform: translate3d(803px, 80px, 0) scale(0.35);
+  -ms-transform: translate3d(803px, 80px, 0) scale(0.35);
+  -webkit-transform: translate3d(803px, 80px, 0) scale(0.35);
+  transform: translate3d(803px, 80px, 0) scale(0.35);
   opacity: 1 !important;
 }
 /* line 744, ../scss/default.scss */
@@ -995,16 +995,16 @@ article.large q:before, article.large q:after {
 /* line 750, ../scss/default.scss */
 .with-notes.popup .note {
   width: 109%;
-  height: 260px;
+  height: 294px;
   background: #e6e6e6;
   padding: 0;
   -moz-box-shadow: 0 0 10px #797979;
   -webkit-box-shadow: 0 0 10px #797979;
   box-shadow: 0 0 10px #797979;
-  -moz-transform: translate3d(250px, 800px, 0) scale(1.5);
-  -ms-transform: translate3d(250px, 800px, 0) scale(1.5);
-  -webkit-transform: translate3d(250px, 800px, 0) scale(1.5);
-  transform: translate3d(250px, 800px, 0) scale(1.5);
+  -moz-transform: translate3d(250px, 868px, 0) scale(1.5);
+  -ms-transform: translate3d(250px, 868px, 0) scale(1.5);
+  -webkit-transform: translate3d(250px, 868px, 0) scale(1.5);
+  transform: translate3d(250px, 868px, 0) scale(1.5);
   -moz-transition: opacity 400ms ease-in-out;
   -o-transition: opacity 400ms ease-in-out;
   -webkit-transition: opacity 400ms ease-in-out;
@@ -1173,11 +1173,11 @@ blockquote p, p.verse p {
   left: 0;
   top: 0;
   width: 100px;
-  height: 700px;
+  height: 768px;
   left: 50%;
   top: 50%;
   cursor: pointer;
-  margin-top: -350px;
+  margin-top: -384px;
 }
 
 /* line 874, ../scss/default.scss */
@@ -1187,7 +1187,7 @@ blockquote p, p.verse p {
 
 /* line 879, ../scss/default.scss */
 #next-slide-area {
-  margin-left: 450px;
+  margin-left: 683px;
 }
 
 /* ===== SLIDE CONTENT ===== */
@@ -1271,7 +1271,7 @@ aside.gdbar.right {
   right: 0;
   left: -moz-initial;
   left: initial;
-  top: 254px;
+  top: 288px;
   /* 96 is height of gray icon bar */
   -moz-transform: rotateZ(180deg);
   -ms-transform: rotateZ(180deg);
