@@ -1,448 +1,448 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title></title>
-<!-- 2018-08-31 Fri 00:21 -->
-<meta  charset="utf-8" />
-<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
-<meta  name="generator" content="Org-mode with org-ioslide" />
-<meta  name="author" content="chens" />
+  <head>
+    <title></title>
+    <!-- 2018-08-31 Fri 00:34 -->
+    <meta  charset="utf-8" />
+    <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta  name="generator" content="Org-mode with org-ioslide" />
+    <meta  name="author" content="chens" />
 
 
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--This one seems to work all the time, but really small on ipad-->
-<!--<meta name="viewport" content="initial-scale=0.4">-->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<link rel="stylesheet" media="all" href="theme/css/default.css" />
-<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
-<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
-<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
-<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--This one seems to work all the time, but really small on ipad-->
+    <!--<meta name="viewport" content="initial-scale=0.4">-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" media="all" href="theme/css/default.css" />
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+    <link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+    <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+    <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
 
-   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
 
-<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
-</head>
-<body style="opacity: 0">
-<slides class="layout-widescreen">
-<slide class="title-slide segue nobackground">
-       <aside class="gdbar"><img src="images/emacs-icon.png"></aside>
-       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-       <hgroup class="auto-fadein">
-         <h1 data-config-title><!-- populated from slide_config.json --></h1>
-         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
-         <p data-config-presenter><!-- populated from slide_config.json --></p>
-       </hgroup>
-    </slide>
-  
-
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc07fabb" class="outline-2">
-<h2 id="orgc07fabb">什么是消息中间件</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-消息中间件是指利用高效可靠的消息传递机制进行平台无关的数据交流，并基于数据通信来进行 <code>分布式系统</code> 的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。 　　
-</p>
+    <script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+  </head>
+  <body style="opacity: 0">
+    <slides class="layout-widescreen">
+      <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="images/emacs-icon.png"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+        <hgroup class="auto-fadein">
+          <h1 data-config-title><!-- populated from slide_config.json --></h1>
+          <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+          <p data-config-presenter><!-- populated from slide_config.json --></p>
+        </hgroup>
+      </slide>
 
 
-<p>
-消息中间件可以即支持同步方式，又支持异步方式。异步中间件比同步中间件具有更强的容错性，在系统故障时可以保证消息的正常传输。异步中间件技术又分为两类： <code>广播方式</code> 和 <code>发布/订阅方式</code> 。由于发布/订阅方式可以指定哪种类型的用户可以接受哪种类型的消息，更加有针对性，事实上已成为异步中间件的非正式标准。
-</p>
+      <slide id="sec-"  >
+        <hgroup class="">
+          <h2 class=" "><div id="outline-container-orgbc02735" class="outline-2">
+              <h2 id="orgbc02735">什么是消息中间件</h2>
+            </div>
+          </h2>
+          <h3></h3>
+        </hgroup>
+        <article class="" id="text-">
+          <p>
+            消息中间件是指利用高效可靠的消息传递机制进行平台无关的数据交流，并基于数据通信来进行 <code>分布式系统</code> 的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。 　　
+          </p>
 
 
-</article>
-
-</slide>
-
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgef82a29" class="outline-2">
-<h2 id="orgef82a29">消息中间件能做什么</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-场景说明：用户注册后，需要发注册邮件和注册短信。传统的做法有两种1.串行的方式；2.并行方式。
-</p>
-
-<p>
-（1）串行方式：将注册信息写入数据库成功后，发送注册邮件，再发送注册短信。以上三个任务全部完成后，返回给客户端。
-</p>
-
-<article class="flexbox vcenter">
-
-<div class="figure">
-<p><img src="images/820332-20160124211106000-2080222350.png" alt="820332-20160124211106000-2080222350.png" width="300px" height="150px" />
-</p>
-</div>
-</article>
-
-<p>
-（2）并行方式：将注册信息写入数据库成功后，发送注册邮件的同时，发送注册短信。以上三个任务完成后，返回给客户端。与串行的差别是，并行的方式可以提高处理的时间。
-</p>
-
-<article class="flexbox vcenter">
-
-<div class="figure">
-<p><img src="images/820332-20160124211115703-218873208.png" alt="820332-20160124211115703-218873208.png" width="300px" height="150px" />
-</p>
-</div>
-</article>
+          <p>
+            消息中间件可以即支持同步方式，又支持异步方式。异步中间件比同步中间件具有更强的容错性，在系统故障时可以保证消息的正常传输。异步中间件技术又分为两类： <code>广播方式</code> 和 <code>发布/订阅方式</code> 。由于发布/订阅方式可以指定哪种类型的用户可以接受哪种类型的消息，更加有针对性，事实上已成为异步中间件的非正式标准。
+          </p>
 
 
-</article>
+        </article>
 
-</slide>
-
+      </slide>
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org3c566ac" class="outline-2">
-<h2 id="org3c566ac">消息中间件能做什么</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-任何中间件必然都是要去解决特定领域的某个问题，消息中间件解决的就是分布式系统之间消息传递的问题。消息传递是分布式系统必然要面对的一个问题。
-</p>
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-org61ce876" class="outline-2">
+        <h2 id="org61ce876">消息中间件能做什么</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <p>
+      场景说明：用户注册后，需要发注册邮件和注册短信。传统的做法有两种1.串行的方式；2.并行方式。
+    </p>
 
-<p>
-假设一个电商交易的场景，用户下单之后调用库存系统减库存，然后需要调用物流系统进行发货，如果交易、库存、物流是属于一个系统的，那么就是接口调用。但是随着系统的发展，各个模块越来越庞大、业务逻辑越来越复杂，必然是要做服务化和业务拆分的。这个时候就需要考虑这些系统之间如何交互，第一反应就是RPC（Remote Procedure Call）。系统继续发展，可能一笔交易后续需要调用几十个接口来执行业务，比如还有风控系统、短信服务等等。这个时候就需要消息中间件登场来解决问题了。
-</p>
+    <p>
+      （1）串行方式：将注册信息写入数据库成功后，发送注册邮件，再发送注册短信。以上三个任务全部完成后，返回给客户端。
+    </p>
 
-<p>
-RPC和消息中间件的场景的差异很大程度上在于就是“依赖”和“量”。比如短信通知服务并不是事交易环节必须的，并不影响下单流程，不是强依赖，所以交易系统不应该依赖短信服务。比如一些数据分析程序可能需要在拿到一天的总销售量，这个就只需要销售中心提供接口在需要时调用即可。
-</p>
+    <article class="flexbox vcenter">
 
-<p>
-消息中间件出现以后对于交易场景可能是调用库存中心等强依赖系统执行业务，之后发布一条消息（这条消息存储于消息中间件中）。像是短信通知服务、数据统计服务等等都是依赖于消息中间件去消费这条消息来完成自己的业务逻辑。
-</p>
+      <div class="figure">
+        <p><img src="images/820332-20160124211106000-2080222350.png" alt="820332-20160124211106000-2080222350.png" width="300px" height="150px" />
+        </p>
+      </div>
+    </article>
 
-<p>
-从以上的场景可以看出消息中间件其实就是对系统进行了解耦，同时带来了异步化等好处。
-</p>
+    <p>
+      （2）并行方式：将注册信息写入数据库成功后，发送注册邮件的同时，发送注册短信。以上三个任务完成后，返回给客户端。与串行的差别是，并行的方式可以提高处理的时间。
+    </p>
 
-<p>
-简单概括一下消息中间件的应用场景大致如下：
-</p>
+    <article class="flexbox vcenter">
 
-<ul>
-<li>业务解耦：交易系统不需要知道短信通知服务的存在，只需要发布消息</li>
-<li>削峰填谷：比如上游系统的吞吐能力高于下游系统，在流量洪峰时可能会冲垮下游系统，消息中间件可以在峰值时堆积消息，而在峰值过去后下游系统慢慢消费消息解决流量洪峰的问题</li>
-<li>事件驱动：系统与系统之间可以通过消息传递的形式驱动业务，以流式的模型处理</li>
-</ul>
+      <div class="figure">
+        <p><img src="images/820332-20160124211115703-218873208.png" alt="820332-20160124211115703-218873208.png" width="300px" height="150px" />
+        </p>
+      </div>
+    </article>
 
 
-</article>
-
-</slide>
-
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org58f5fbf" class="outline-2">
-<h2 id="org58f5fbf">消息中间件能做什么</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-引入消息队列，将不是必须的业务逻辑，异步处理。改造后的架构如下：
-</p>
-
-<article class="flexbox vcenter">
-
-<div class="figure">
-<p><img src="images/820332-20160124211131625-1083908699.png" alt="820332-20160124211131625-1083908699.png" width="300px" height="150px" />
-</p>
-</div>
-</article>
-
-
-</article>
+  </article>
 
 </slide>
 
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgd3b002e" class="outline-2">
-<h2 id="orgd3b002e">消息中间件原理</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-面向消息的中间件（MOM），提供了以松散耦合的灵活方式集成应用程序的一种机制。它们提供了基于存储和转发的应用程序之间的异步数据发送，即应用程序彼此不直接通信，而是与作为中介的MOM通信。MOM提供了有保证的消息发送（至少是在尽可能地做 到这一点），应用程序开发人员无需了解远程过程调用（PRC）和网络/通信协议的细节。
-</p>
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-org89d3e7e" class="outline-2">
+        <h2 id="org89d3e7e">消息中间件能做什么</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <p>
+      任何中间件必然都是要去解决特定领域的某个问题，消息中间件解决的就是分布式系统之间消息传递的问题。消息传递是分布式系统必然要面对的一个问题。
+    </p>
+
+    <p>
+      假设一个电商交易的场景，用户下单之后调用库存系统减库存，然后需要调用物流系统进行发货，如果交易、库存、物流是属于一个系统的，那么就是接口调用。但是随着系统的发展，各个模块越来越庞大、业务逻辑越来越复杂，必然是要做服务化和业务拆分的。这个时候就需要考虑这些系统之间如何交互，第一反应就是RPC（Remote Procedure Call）。系统继续发展，可能一笔交易后续需要调用几十个接口来执行业务，比如还有风控系统、短信服务等等。这个时候就需要消息中间件登场来解决问题了。
+    </p>
+
+    <p>
+      RPC和消息中间件的场景的差异很大程度上在于就是“依赖”和“量”。比如短信通知服务并不是事交易环节必须的，并不影响下单流程，不是强依赖，所以交易系统不应该依赖短信服务。比如一些数据分析程序可能需要在拿到一天的总销售量，这个就只需要销售中心提供接口在需要时调用即可。
+    </p>
+
+    <p>
+      消息中间件出现以后对于交易场景可能是调用库存中心等强依赖系统执行业务，之后发布一条消息（这条消息存储于消息中间件中）。像是短信通知服务、数据统计服务等等都是依赖于消息中间件去消费这条消息来完成自己的业务逻辑。
+    </p>
+
+    <p>
+      从以上的场景可以看出消息中间件其实就是对系统进行了解耦，同时带来了异步化等好处。
+    </p>
+
+    <p>
+      简单概括一下消息中间件的应用场景大致如下：
+    </p>
+
+    <ul>
+      <li>业务解耦：交易系统不需要知道短信通知服务的存在，只需要发布消息</li>
+      <li>削峰填谷：比如上游系统的吞吐能力高于下游系统，在流量洪峰时可能会冲垮下游系统，消息中间件可以在峰值时堆积消息，而在峰值过去后下游系统慢慢消费消息解决流量洪峰的问题</li>
+      <li>事件驱动：系统与系统之间可以通过消息传递的形式驱动业务，以流式的模型处理</li>
+    </ul>
 
 
-</article>
+  </article>
 
 </slide>
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org3999715" class="outline-2">
-<h2 id="org3999715">消息中间件的组成</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<ul>
-<li>Broker</li>
-</ul>
-<p>
-消息服务器，作为server提供消息核心服务
-</p>
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-orgd2eac24" class="outline-2">
+        <h2 id="orgd2eac24">消息中间件能做什么</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <p>
+      引入消息队列，将不是必须的业务逻辑，异步处理。改造后的架构如下：
+    </p>
 
-<ul>
-<li>Producer</li>
-</ul>
-<p>
-消息生产者，业务的发起方，负责生产消息传输给broker，
-</p>
+    <article class="flexbox vcenter">
 
-<ul>
-<li>Consumer</li>
-</ul>
-<p>
-消息消费者，业务的处理方，负责从broker获取消息并进行业务逻辑处理
-</p>
-
-<ul>
-<li>Topic</li>
-</ul>
-<p>
-主题，发布订阅模式下的消息统一汇集地，不同生产者向topic发送消息，由MQ
-服务器分发到不同的订阅者，实现消息的广播
-</p>
-
-<ul>
-<li>Queue</li>
-</ul>
-<p>
-队列，PTP模式下，特定生产者向特定queue发送消息，消费者订阅特定的queue
-完成指定消息的接收
-</p>
-
-<ul>
-<li>Message</li>
-</ul>
-<p>
-消息体，根据不同通信协议定义的固定格式进行编码的数据包，来封装业务数据，实现消息的传输
-</p>
+      <div class="figure">
+        <p><img src="images/820332-20160124211131625-1083908699.png" alt="820332-20160124211131625-1083908699.png" width="300px" height="150px" />
+        </p>
+      </div>
+    </article>
 
 
-</article>
+  </article>
+
+</slide>
+
+
+</slide>
+<slide id="sec-"  >
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-org1da41d0" class="outline-2">
+        <h2 id="org1da41d0">消息中间件原理</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <p>
+      面向消息的中间件（MOM），提供了以松散耦合的灵活方式集成应用程序的一种机制。它们提供了基于存储和转发的应用程序之间的异步数据发送，即应用程序彼此不直接通信，而是与作为中介的MOM通信。MOM提供了有保证的消息发送（至少是在尽可能地做 到这一点），应用程序开发人员无需了解远程过程调用（PRC）和网络/通信协议的细节。
+    </p>
+
+
+  </article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-org5f84138" class="outline-2">
+        <h2 id="org5f84138">消息中间件的组成</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <ul>
+      <li>Broker</li>
+    </ul>
+    <p>
+      消息服务器，作为server提供消息核心服务
+    </p>
+
+    <ul>
+      <li>Producer</li>
+    </ul>
+    <p>
+      消息生产者，业务的发起方，负责生产消息传输给broker，
+    </p>
+
+    <ul>
+      <li>Consumer</li>
+    </ul>
+    <p>
+      消息消费者，业务的处理方，负责从broker获取消息并进行业务逻辑处理
+    </p>
+
+    <ul>
+      <li>Topic</li>
+    </ul>
+    <p>
+      主题，发布订阅模式下的消息统一汇集地，不同生产者向topic发送消息，由MQ
+      服务器分发到不同的订阅者，实现消息的广播
+    </p>
+
+    <ul>
+      <li>Queue</li>
+    </ul>
+    <p>
+      队列，PTP模式下，特定生产者向特定queue发送消息，消费者订阅特定的queue
+      完成指定消息的接收
+    </p>
+
+    <ul>
+      <li>Message</li>
+    </ul>
+    <p>
+      消息体，根据不同通信协议定义的固定格式进行编码的数据包，来封装业务数据，实现消息的传输
+    </p>
+
+
+  </article>
 
 </slide>
 
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
-<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org8a52306" class="outline-2">
-<h2 id="org8a52306">消息中间件模式分类</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="flexbox vleft auto-fadein" id="text-">
+  <aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
+    <h2 class=" "><div id="outline-container-orgf9b831d" class="outline-2">
+        <h2 id="orgf9b831d">消息中间件模式分类</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="flexbox vleft auto-fadein" id="text-">
 
 
-</article>
-
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orge88d691" class="outline-3">
-<h3 id="orge88d691">点对点</h3>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<article class="flexbox vcenter">
-
-<div class="figure">
-<p><img src="images/20180417-1.png" alt="20180417-1.png" width="600px" height="300px" />
-</p>
-</div>
-</article>
-
-<p>
-说明： 
-</p>
-
-<p>
-消息生产者生产消息发送到queue中，然后消息消费者从queue中取出并且消费消息。
-</p>
-
-<p>
-消息被消费以后，queue中不再存储，所以消息消费者不可能消费到已经被消费的消息。 Queue支持存在多个消费者，但是对一个消息而言，只会有一个消费者可以消费。
-</p>
-
-
-</article>
-
-</slide>
+  </article>
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org194b12a" class="outline-3">
-<h3 id="org194b12a">发布/订阅</h3>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<article class="flexbox vcenter">
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-orgfbccc34" class="outline-3">
+        <h3 id="orgfbccc34">点对点</h3>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <article class="flexbox vcenter">
 
-<div class="figure">
-<p><img src="images/20180417-2.png" alt="20180417-2.png" width="600px" height="300px" />
-</p>
-</div>
-</article>
+      <div class="figure">
+        <p><img src="images/20180417-1.png" alt="20180417-1.png" width="600px" height="300px" />
+        </p>
+      </div>
+    </article>
 
-<p>
-说明： 
-</p>
+    <p>
+      说明：
+    </p>
 
-<p>
-消息生产者（发布）将消息发布到topic中，同时有多个消息消费者（订阅）消费该消息。和点对点方式不同，发布到topic的消息会被所有订阅者消费。
-</p>
+    <p>
+      消息生产者生产消息发送到queue中，然后消息消费者从queue中取出并且消费消息。
+    </p>
 
-<p>
-queue实现了负载均衡，将producer生产的消息发送到消息队列中，由多个消费者消费。但一个消息只能被一个消费者接受，当没有消费者可用时，这个消息会被保存直到有一个可用的消费者。  topic实现了发布和订阅，当你发布一个消息，所有订阅这个topic的服务都能得到这个消息，所以从1到N个订阅者都能得到一个消息的拷贝。
-</p>
+    <p>
+      消息被消费以后，queue中不再存储，所以消息消费者不可能消费到已经被消费的消息。 Queue支持存在多个消费者，但是对一个消息而言，只会有一个消费者可以消费。
+    </p>
 
 
-</article>
-
-</slide>
+  </article>
 
 </slide>
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb82af31" class="outline-2">
-<h2 id="orgb82af31">现在主流的消息中间件</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<ul>
-<li>ActiveMQ <a href="http://activemq.apache.org/">http://activemq.apache.org/</a></li>
-</ul>
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-org0fdff63" class="outline-3">
+        <h3 id="org0fdff63">发布/订阅</h3>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <article class="flexbox vcenter">
 
-<p>
-ActiveMQ 是Apache出品，最流行的，能力强劲的开源消息总线。ActiveMQ 是一个完全支持JMS1.1和J2EE 1.4规范的 JMS Provider实现，尽管JMS规范出台已经是很久的事情了，但是JMS在当今的J2EE应用中间仍然扮演着特殊的地位。
-</p>
+      <div class="figure">
+        <p><img src="images/20180417-2.png" alt="20180417-2.png" width="600px" height="300px" />
+        </p>
+      </div>
+    </article>
 
-<ul>
-<li>kafka <a href="https://kafka.apache.org/">https://kafka.apache.org/</a></li>
-</ul>
+    <p>
+      说明：
+    </p>
 
-<p>
-Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache定级项目。
-Kafka主要特点是基于Pull的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，适合产生大量数据的互联网服务的数据收集业务。
-</p>
+    <p>
+      消息生产者（发布）将消息发布到topic中，同时有多个消息消费者（订阅）消费该消息。和点对点方式不同，发布到topic的消息会被所有订阅者消费。
+    </p>
 
-
-<ul>
-<li>RabbitMQ <a href="https://www.rabbitmq.com/">https://www.rabbitmq.com/</a></li>
-</ul>
-
-<p>
-RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。
-AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内，对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。
-</p>
-
-<ul>
-<li>RocketMQ <a href="https://rocketmq.apache.org/">https://rocketmq.apache.org/</a></li>
-</ul>
-
-<p>
-RocketMQ是阿里开源的消息中间件，它是纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。RocketMQ思路起源于Kafka，但并不是Kafka
-的一个Copy，它对消息的可靠传输及事务性做了优化，目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。
-</p>
+    <p>
+      queue实现了负载均衡，将producer生产的消息发送到消息队列中，由多个消费者消费。但一个消息只能被一个消费者接受，当没有消费者可用时，这个消息会被保存直到有一个可用的消费者。  topic实现了发布和订阅，当你发布一个消息，所有订阅这个topic的服务都能得到这个消息，所以从1到N个订阅者都能得到一个消息的拷贝。
+    </p>
 
 
-</article>
+  </article>
+
+</slide>
 
 </slide>
 
 </slide>
 <slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org35b2bc6" class="outline-2">
-<h2 id="org35b2bc6">参考链接</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<ul>
-<li><a href="https://www.cnblogs.com/itfly8/p/5155983.html">大型网站架构系列：分布式消息队列（一）</a></li>
-<li><a href="https://blog.csdn.net/leexide/article/details/80035462">消息中间件详解</a></li>
-<li><a href="http://jm.taobao.org/2016/04/01/kafka-vs-rabbitmq-vs-rocketmq-message-send-performance/">Kafka、RabbitMQ、RocketMQ消息中间件的对比 —— 消息发送性能</a></li>
-<li><a href="https://www.cnblogs.com/hzmark/p/mq.html">什么是分布式消息中间件？</a></li>
-<li><a href="https://blog.csdn.net/shb_derek1/article/details/78625883">消息中间件的理解和学习</a></li>
-</ul>
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-orgdfdc729" class="outline-2">
+        <h2 id="orgdfdc729">现在主流的消息中间件</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <ul>
+      <li>ActiveMQ <a href="http://activemq.apache.org/">http://activemq.apache.org/</a></li>
+    </ul>
+
+    <p>
+      ActiveMQ 是Apache出品，最流行的，能力强劲的开源消息总线。ActiveMQ 是一个完全支持JMS1.1和J2EE 1.4规范的 JMS Provider实现，尽管JMS规范出台已经是很久的事情了，但是JMS在当今的J2EE应用中间仍然扮演着特殊的地位。
+    </p>
+
+    <ul>
+      <li>kafka <a href="https://kafka.apache.org/">https://kafka.apache.org/</a></li>
+    </ul>
+
+    <p>
+      Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache定级项目。
+      Kafka主要特点是基于Pull的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，适合产生大量数据的互联网服务的数据收集业务。
+    </p>
 
 
-</article>
+    <ul>
+      <li>RabbitMQ <a href="https://www.rabbitmq.com/">https://www.rabbitmq.com/</a></li>
+    </ul>
+
+    <p>
+      RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。
+      AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内，对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。
+    </p>
+
+    <ul>
+      <li>RocketMQ <a href="https://rocketmq.apache.org/">https://rocketmq.apache.org/</a></li>
+    </ul>
+
+    <p>
+      RocketMQ是阿里开源的消息中间件，它是纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。RocketMQ思路起源于Kafka，但并不是Kafka
+      的一个Copy，它对消息的可靠传输及事务性做了优化，目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。
+    </p>
+
+
+  </article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+  <hgroup class="">
+    <h2 class=" "><div id="outline-container-orgd2f7906" class="outline-2">
+        <h2 id="orgd2f7906">参考链接</h2>
+      </div>
+    </h2>
+    <h3></h3>
+  </hgroup>
+  <article class="" id="text-">
+    <ul>
+      <li><a href="https://www.cnblogs.com/itfly8/p/5155983.html">大型网站架构系列：分布式消息队列（一）</a></li>
+      <li><a href="https://blog.csdn.net/leexide/article/details/80035462">消息中间件详解</a></li>
+      <li><a href="http://jm.taobao.org/2016/04/01/kafka-vs-rabbitmq-vs-rocketmq-message-send-performance/">Kafka、RabbitMQ、RocketMQ消息中间件的对比 —— 消息发送性能</a></li>
+      <li><a href="https://www.cnblogs.com/hzmark/p/mq.html">什么是分布式消息中间件？</a></li>
+      <li><a href="https://blog.csdn.net/shb_derek1/article/details/78625883">消息中间件的理解和学习</a></li>
+    </ul>
+
+
+  </article>
 
 </slide>
 
 </slide>
 <slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
-<aside class="gdbar right"><img src="images/emacs-icon.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
-<h2>
-  <p>Thank You ˊ・ω・ˋ</p>
-</h2>
-<br>
-<p class="auto-fadein" data-config-contact>
-</p>
-</article>
+  <aside class="gdbar right"><img src="images/emacs-icon.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
+    <h2>
+      <p>Thank You ˊ・ω・ˋ</p>
+    </h2>
+    <br>
+    <p class="auto-fadein" data-config-contact>
+    </p>
+  </article>
 
 </slide>
 <slide class="backdrop"></slide>
-</slides> 
+</slides>
 <script>
-var _gaq = _gaq || []; 
-_gaq.push(['_setAccount', 'UA-42122243-1']);
-_gaq.push(['_trackPageview']); 
-(function() {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42122243-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+  })();
 </script>
 <!--[if IE]>
-  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-  <script>CFInstall.check({mode: 'overlay'});</script>
-<![endif]-->
-</body> 
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+    <![endif]-->
+</body>
 
 </html>
