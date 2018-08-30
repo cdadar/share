@@ -1,0 +1,15 @@
+* share
+分享的PPT
+
+** org-ioslide
+使用 =org-ioslide= 将 =org=  生成html的ppt
+
+[[https://github.com/coldnew/org-ioslide]]
+
+*** edit css
+#+BEGIN_SRC shell
+gem update --system
+gem install compass
+cd share
+compass watch
+#+END_SRC
