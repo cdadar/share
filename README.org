@@ -2,6 +2,7 @@
 分享的PPT
 
 ** 目录
+- [[https://cdadar.github.io/share/share_mq.html][消息中间件]]
 - [[https://cdadar.github.io/share/share_git.html][版本控制器]]
 - [[https://cdadar.github.io/share/share_linux.html][linux]]
 ** org-ioslide

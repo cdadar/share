@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: '版本控制器 -- git', 
-     subtitle: '分布式版本控制器', 
+     title: '消息中间件 -- mq', 
+     subtitle: '消息中间件', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
