@@ -1,6 +1,9 @@
 * share
 分享的PPT
 
+** 目录
+- [[https://cdadar.github.io/share/share_git.html][版本控制器]]
+- [[https://cdadar.github.io/share/share_linux.html][linux]]
 ** org-ioslide
 使用 =org-ioslide= 将 =org=  生成html的ppt
 
